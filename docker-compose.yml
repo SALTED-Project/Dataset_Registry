@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+
+  dataset_registry:
+    container_name: dataset_registry
+    build: .
+    restart: unless-stopped
+    # extra_hosts: add if necessary
+    volumes:
+      - ./src/config.json:/app/config.json:ro
+    ports:
+      - ${EXTERNAL_PORT}:${INTERNAL_PORT}

@@ -1,0 +1,25 @@
+{
+    "form_key": <form_key>,
+    "port": <internal docker port>, 
+    "context_broker": {
+        "url": <access URL of the context broker (i.e. "http(s)://<hostname>:<port>")>,
+        "authentication": <boolean that determines if the context broker access has authentication>
+    },
+    "context": <URL of the json-ld/ngsi-ld context file>,
+    "catalog": { 
+        "_useful_documentation": "https://docs.ckan.org/en/2.10/api/index.html?highlight=organization_create#ckan.logic.action.create.organization_create"
+        "id": <catalogue id (cannot contain blank spaces)>,
+        "name": <catalogue name (cannot contain blank spaces)>,
+        "title": <catalogue title>,
+        "description": <catalogue description>,
+        "publisher": <catalogue publisher>,
+        "homepage": <publisher homepage>,
+        "rights": <type of access rights of the catalogue. It has to be one of these ("http://publications.europa.eu/resource/authority/access-right"): PUBLIC, RESTRICTED, PRIVATE.>,
+        "license": <URL of the license granted to the consumer regarding the use of the catalogue data>
+    },
+    "distribution": {
+        "_useful_documentation": "https://docs.ckan.org/en/2.10/api/index.html?highlight=organization_create#ckan.logic.action.create.resource_create",
+        "base_url": <base URL through which the data of the distributions/resources can be accessed>,
+        "availability": <temporal feature of data availability>
+    }
+}
